@@ -1,0 +1,26 @@
+{
+    "name": "C++ Dev Env",
+    "build": {
+        "dockerfile": "../Dockerfile",
+    },
+    "runArgs": [
+        "--gpus",
+        "all",
+        "--ipc=host",
+        "--ulimit",
+        "memlock=-1",
+        "--ulimit",
+        "stack=67108864",
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat",
+                "github.vscode-github-actions",
+            ]
+        }
+    },
+    "remoteUser": "ubuntu"
+}
